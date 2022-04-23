@@ -31,7 +31,7 @@ const data=useSelector(data=>data.List)
     <div className="pandetaList" >  
 {
  data.map((list,index)=>     
-           <LazyLoad offsetVertical={300} key={index}> 
+           <LazyLoad offsetVertical={100} key={index}> 
             <div className="card" data-aos={index%2===0?"fade-right":"fade-left"} key={list.id} onClick={()=>handleClick(list)}>
                
                   <img src={list.image}  alt="image1"/>

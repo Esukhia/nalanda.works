@@ -1,27 +1,23 @@
 import React from 'react'
-import List from './ListOfPan'
-import Desc from './Desc'
 import Tree from './Tree'
 import {prayer} from '../helper/prayerMarquee'
+import Main from './Main'
+import 'react-splitter-layout/lib/index.css';
+import Nav from './Nav';
+
 function Index(){
   return (
-    <div className='mainBody'>
-      
-      <div className='absoluteBackground'></div>
-      <div className='sidebar'>
+    <div>
+      <Nav/>
+    <div className='mainBody' style={{display:'flex'}}>
         <Tree/>
-      </div>
-      <main>
-
-         <hr/>
-         <Desc/>
-         <List/>
-         
-    </main> 
+        <Main/>
     <footer style={{zIndex:999}}>
            <marquee >{prayer}</marquee>
            </footer>
             </div>
+            </div>
+
   )
 }
 

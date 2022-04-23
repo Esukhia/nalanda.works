@@ -1,3 +1,23 @@
 .sidebar{
-  max-height: 100vh;
+  height: 90vh;
+  z-index: 1;
+  top: 20px; /* this is required for "sticky" to work */
+  position: sticky;
+  margin-right:10px;
+  border:1px solid grey;
+}
+.sidebar-header{
+  text-align: center;
+}
+::-webkit-scrollbar {
+  width: .5em;
+}
+ 
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+  border-radius: 20px;
 }

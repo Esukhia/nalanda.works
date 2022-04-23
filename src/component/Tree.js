@@ -1,15 +1,15 @@
 import React from 'react'
 import 'react-pro-sidebar/dist/css/styles.css';
 import '../style/Tree.css'
-import clasify from '../helper/Clasifydata';
+import { useSelector } from 'react-redux';
 import { ProSidebar, Menu, MenuItem, SubMenu,SidebarHeader } from 'react-pro-sidebar';
 function Tree_Side() {
-   var  data=clasify();
-    console.log(data)
+const data=useSelector(l=>l.List)
+
   return (
-    <ProSidebar>
+    <ProSidebar className='sidebar'>
      <SidebarHeader>
-     <h1 style={{textAlign:"center"}}>པན་གྲུབ་བཅུ་བདུན།</h1>
+     <h1 className='sidebar-header'>ནང་དོན་དཀར་ཆག</h1>
      </SidebarHeader>
 
 

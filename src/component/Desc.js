@@ -1,7 +1,6 @@
 import React,{useEffect} from 'react'
 import { useSelector,useDispatch } from 'react-redux'
 import ReactLoading from 'react-loading';
-import {List} from 'react-virtualized';
 import '../style/desc.css'
 
 function Desc() {
@@ -18,6 +17,7 @@ setTimeout(()=>{
 },[list])
   return ( <div className='discription' data-aos="zoom-in-down">
     {!loading ?(<>
+    <div className='background-image'></div>
    <div className='Img-desc'>
      <img src={list?.image} alt='desc-data'/>
     
@@ -39,7 +39,7 @@ setTimeout(()=>{
 
     </>
 
-   ):(<div style={{display:'flex',gridColumn:'2/3',justifyContent:'center'}}>
+   ):(<div style={{display:'flex',width:'100%'}}>
      <ReactLoading type="spin" color="black" />
        </div> )
     }
