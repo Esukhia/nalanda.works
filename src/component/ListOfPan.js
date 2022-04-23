@@ -27,7 +27,6 @@ const scrollToSection = () => {
     scrollToSection()
 }
 const data=useSelector(data=>data.List)
-
   return (
     <div className="pandetaList" >  
 {
@@ -36,7 +35,7 @@ const data=useSelector(data=>data.List)
             <div className="card" data-aos={index%2===0?"fade-right":"fade-left"} key={list.id} onClick={()=>handleClick(list)}>
                
                   <img src={list.image}  alt="image1"/>
-             
+            
                <div className="card-body">
                  <p className="card-text" >{list.name}</p>
                </div>

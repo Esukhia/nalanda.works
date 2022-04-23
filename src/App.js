@@ -4,8 +4,10 @@ import {connect} from 'react-redux'
 import Index from './component'
 import {changeSelection} from "./helper/myAction.js"
 function App() {
+  
   return (
     <div className="App">
+    
      <Index/>
     </div>
   );

@@ -36,3 +36,6 @@
     padding-bottom: 20px;
     
 }
+.mainBody{
+    display:flex;
+}

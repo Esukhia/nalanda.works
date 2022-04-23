@@ -1,20 +1,27 @@
 import React from 'react'
 import List from './ListOfPan'
-import Heading from './Heading'
 import Desc from './Desc'
+import Tree from './Tree'
 import {prayer} from '../helper/prayerMarquee'
-function Index() {
-
-
+function Index(){
   return (
-    <div >
-        <div className='absoluteBackground'></div>
-         <Heading/>
+    <div className='mainBody'>
+      
+      <div className='absoluteBackground'></div>
+      <div className='sidebar'>
+        <Tree/>
+      </div>
+      <main>
+
          <hr/>
          <Desc/>
          <List/>
-         <footer><marquee>{prayer}</marquee></footer>
-    </div>
+         
+    </main> 
+    <footer style={{zIndex:999}}>
+           <marquee >{prayer}</marquee>
+           </footer>
+            </div>
   )
 }
 

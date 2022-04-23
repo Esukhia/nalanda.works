@@ -1,8 +1,10 @@
-import {data} from '../helper/pandetaInfo'
-
+import {pandetas} from '../data/pandetaInfo'
+import {detail} from '../data/exportdata'
+import clasify from '../helper/Clasifydata'
 const initialState={
-    List:data,
-    selection:data[0],
+    List:clasify(),
+    detail,
+    selection:pandetas[0],
     loaded:false
 };
 export const reducer = (state = initialState, action) => {
