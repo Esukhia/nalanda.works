@@ -4,10 +4,10 @@ import Desc from './Desc'
 
 function Main() {
   return (
-    <div>
+    <>
         <Desc/>
         <Listed/>
-    </div>
+    </>
   )
 }
 

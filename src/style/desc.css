@@ -1,5 +1,7 @@
 
 .discription{
+  min-height: 60vh;
+  grid-area: description;
  background-color: rgba(0,0,0,0.9);
   border-radius: 10px;
     color:black;
@@ -19,11 +21,12 @@
   width:100%;
   z-index: -1;
   position: absolute;
-  background-image: url('https://tibetpedia.com/wp-content/uploads/2018/09/Day-6-Extravagant-Yak-Tibet-Everest-Behind-Prayer-Flags-20160509_076577.jpg');
+background-color: #888;
+  /* background-image: url('https://tibetpedia.com/wp-content/uploads/2018/09/Day-6-Extravagant-Yak-Tibet-Everest-Behind-Prayer-Flags-20160509_076577.jpg'); */
   background-position: center;
   background-size: cover;
   background-clip: content-box; 
-  filter: blur(2px);
+  filter: blur(10px);
   -webkit-filter: blur(2px);
 }
 .card-desc{
@@ -31,17 +34,19 @@
     grid-area:desc;
     margin-bottom: 5vh;
     color:white;
-    padding:5px 0;
+    padding:20px 0;
+    border-radius: 5px ;
     background-color: rgba(0,0,0,0.4);
 }
 .Img-desc{
     grid-area: img;
-    width: 100px;
-    height: 140px;
+    width: 100%;
+    height: 100%;
+    max-height: 90%;
     border:3px solid black;
 }
 .Img-desc>img{
-    object-fit: contain;
+    object-fit: cover;
     width: 100%;
     height: 100%;
     box-shadow: 0px 0px 20px 0px #FF8C32;
@@ -75,6 +80,12 @@
       grid-area:desc;
       margin-bottom: 5vh;
   }
+  .Img-desc{
+    grid-area: img;
+    max-width: 40%;
+   height: 40vh;
+    border:3px solid black;
+}
     
   }
 

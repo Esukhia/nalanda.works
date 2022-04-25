@@ -1,4 +1,10 @@
 :root{
-    --backgroundColor:rgba(0,0,0,0.6);
-    --color:white;
+    --navBackgroundColor:black;
+    --navColor:white;
+    --mainBackgoundColor:#06113C;
+    --mainColor:white;
+   --footerBackgroundColor:black;
+   --footerColor:white;
+
+
 }

@@ -1,7 +1,8 @@
 .sidebar{
-  height: 90vh;
+  grid-area:tree;
+  height: 80vh;
   z-index: 1;
-  top: 20px; /* this is required for "sticky" to work */
+  top: 80px; /* this is required for "sticky" to work */
   position: sticky;
   margin-right:10px;
   border:1px solid grey;
