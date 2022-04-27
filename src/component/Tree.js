@@ -6,7 +6,7 @@ import { ProSidebar, Menu, MenuItem, SubMenu,SidebarHeader } from 'react-pro-sid
 function Tree_Side() {
 const data=useSelector(l=>l.List)
 const gotoaddress=(textId)=>{
-  window.open(`http://parkhang.lopenling.org/text/${textId}`, '_blank');
+  window.open(`http://parkhang.lopenling.org/texts/${textId}`, '_blank');
 }
 var tibCount=['༡','༢','༣','༤','༥','༦','༧','༨','༩','༡༠','༡༡','༡༢','༡༣','༡༤','༡༥','༡༦','༡༧']
 
