@@ -16,6 +16,13 @@ export const reducer = (state = initialState, action) => {
                 ...state
             }
         case "changeSelection":
+            if(action.data2){
+                const data=pandetas.find(l=>l.name===action.data2)
+                return {
+                    ...state,
+                    selection:data
+                }
+            }
             return {
                 ...state,
                 selection:action.data

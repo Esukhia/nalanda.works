@@ -1,13 +1,16 @@
+.Maintenance { text-align: center; padding: 150px; background-color: antiquewhite; }
+article h1 { font-size: 50px; }
+.Maintenance { font: 20px Helvetica, sans-serif; color: #333; }
+article { display: block; text-align: left; max-width: 650px; margin: 0 auto; }
+article a { color: #dc8100; text-decoration: none; }
+article a:hover { color: #333; text-decoration: none; }
 
-.Wallpaper{
-width: 100vw;
-height: 100vh;
-background-color: orange;
-/* background-image: url(../img/wallpaper.png);
-background-size:100%  100%;
-background-repeat: no-repeat;
-background-position: center;
-position: fixed;
-inset:0; */
 
+@media (max-width:900px) {
+article h1 { font-size: 25px; }
+.Maintenance {display:flex;justify-content: center;align-items:center;padding:30px; height: 100vh; }
+.Maintenance { font: 16px Helvetica, sans-serif; color: #333; }
+
+article { display: block; text-align: left; max-width: 650px; margin: 0 auto; }
+    
 }

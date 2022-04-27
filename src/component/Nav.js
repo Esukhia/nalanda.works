@@ -1,9 +1,11 @@
 import React  from 'react'
 import '../style/Nav.css'
 import {useDispatch} from 'react-redux'
-function Nav() {
-  const dispatch=useDispatch();
+import { withLDConsumer } from 'launchdarkly-react-client-sdk';
 
+function Nav({flags}) {
+  const dispatch=useDispatch();
+  
 
   const handleColor=(checked)=>{
      dispatch({
@@ -18,13 +20,12 @@ function Nav() {
   <ul className="main-nav">
       <li><a href="http://www.lopenling.org">Lopenling</a></li>
       <li><a href="#">Contact</a></li>
-          
-          <li><input type="checkbox" id='toggle' onChange={e=>handleColor(e.target.checked)}/>
+      {flags.changeThemeNalandaWeb && <li><input type="checkbox" id='toggle' onChange={e=>handleColor(e.target.checked)}/>
           <label htmlFor='toggle' className='button'></label></li>
-
+            }
   </ul>
 </header> 
   )
 }
 
-export default Nav
+export default withLDConsumer()(Nav)
