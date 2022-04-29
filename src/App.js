@@ -25,8 +25,11 @@ const mapDispatchToProps= dispatch=>{
     changeSelection: ()=>dispatch(changeSelection())
   }
 }
+
+let clientId=process.env.NODE_ENV==='development'?'6269293a03fba314f6ecebb5':'6269293a03fba314f6ecebb6';
+
 export default connect(mapStateToProps, mapDispatchToProps)(withLDProvider({
-  clientSideID: '6269293a03fba314f6ecebb5',
+  clientSideID: clientId,
   user: {
       "key": "tenkus",
       "name": "tenzin kunsang",
