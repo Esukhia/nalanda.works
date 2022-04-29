@@ -1,0 +1,164 @@
+@import './color.css';
+* {
+	box-sizing: border-box;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
+h2,
+h3,
+a {
+	color: var(--navColor);
+}
+
+a {
+	text-decoration: none;
+}
+
+
+
+.logo {
+	margin: 0;
+	font-size: 1.45em;
+}
+
+.main-nav {
+	margin-top: 5px;
+
+}
+.logo a,
+.main-nav a {
+	padding: 10px 15px;
+	text-transform: uppercase;
+	text-align: center;
+	display: block;
+}
+
+.main-nav a {
+	color: var(--navColor);
+	font-size: .99em;
+}
+
+.main-nav a:hover {
+	color: #718daa;
+}
+
+
+
+.header {
+	transition: 1s all ease;
+	animation: 1s ease-out 0s 1 slideInLeft;
+	padding-top: .5em;
+	padding-bottom: .5em;
+	border: 1px solid #a2a2a2;
+	background-color: var(--navBackgroundColor);
+	-webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	margin-bottom: 20px;
+	color:var(--navColor);
+}
+.eye{
+	width: 40%;
+	height: 80px;
+}
+
+#toggle{
+	display: none;
+}
+
+.button{
+	margin-right:20px;
+	margin-top:10px;
+	display:inline-block;
+	width:45px;
+	height:20px;
+	background-color:#fff;
+	border-radius:40px;
+	position:relative;
+	cursor: pointer;
+}
+.button::after{
+	content:url('../img/svgFiles/dark.svg');
+	width:15px;
+	height:15px;
+	background-color:var(--backgroundColor);
+	padding:2px;
+	border-radius: 50%;
+	box-shadow: 0 0 5px rgba(0,0,0, .25);
+	position:absolute;
+	left:0;
+	display: grid;
+	place-content: center;
+	line-height: 0;
+	transition:  background-color 1s,
+	transform 1s ease-in;
+}
+
+#toggle:checked + .button::after{
+	content: url('../img/svgFiles/sun.svg');
+	background-color:var(--color);
+	transform: translateX(30px) rotate(360deg);
+}
+
+
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+
+
+
+@media (min-width: 769px) {
+	.header,
+	.main-nav {
+		display: flex;
+		position: sticky;
+		top:0;
+		z-index: 200;
+	}
+	.header {
+		flex-direction: column;
+		align-items: center;
+    	.header{
+		width: 80%;
+		margin: 0 auto;
+		max-width: 1150px;
+	}
+	}
+	.header h1{
+		transform:translateX(20px) translateY(-5px) ;
+		transition: 0.3s all ease-in-out;
+	}
+	.header h1:hover{
+		transform: scale(1.1) translateX(20px) translateY(-5px) ;
+	}
+	
+}
+
+@media (min-width: 1025px) {
+	.header {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+}
+
+
+@keyframes slideInLeft {
+	0% {
+	  transform: translateY(-100%);
+	}
+	100% {
+	  transform: translateY(0);
+	}
+  }

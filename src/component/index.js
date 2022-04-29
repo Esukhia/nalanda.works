@@ -1,21 +1,30 @@
 import React from 'react'
-import List from './ListOfPan'
-import Heading from './Heading'
-import Desc from './Desc'
-import {prayer} from '../helper/prayerMarquee'
-function Index() {
+import Tree from './Tree'
+import Main from './Main'
+import 'react-splitter-layout/lib/index.css';
+import Nav from './Nav';
+import Footer from './Footer'
+import Maintenance from './Maintenance';
+import { withLDConsumer } from 'launchdarkly-react-client-sdk';
 
+function Index({flags}){
 
+if(!flags.underMaintenance)
   return (
-    <div >
-        <div className='absoluteBackground'></div>
-         <Heading/>
-         <hr/>
-         <Desc/>
-         <List/>
-         <footer><marquee>{prayer}</marquee></footer>
-    </div>
-  )
+    <>
+      <Nav />
+      <div className="mainBody">
+        <Tree />
+        <Main />
+      </div>
+      <Footer />
+    </>
+  );
+
+else{
+  return <Maintenance/>;            //Maintenance page
 }
 
-export default Index
+}
+
+export default withLDConsumer()(Index)

@@ -1,0 +1,29 @@
+.sidebar{
+  grid-area:tree;
+  height: 80vh;
+  z-index: 1;
+  top: 80px; /* this is required for "sticky" to work */
+  position: sticky;
+  margin-right:10px;
+  /* border:2px solid grey; */
+  border-radius: 0px 10px 10px 0px;
+}
+.sidebar-header{
+  text-align: center;
+}
+::-webkit-scrollbar {
+  width: .5em;
+}
+ 
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+  border-radius: 20px;
+}
+.active-treeItem{
+  background-color: #444;
+    color: white;
+}
