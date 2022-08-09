@@ -31,7 +31,7 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 > there is a Demo App hosted on Github Page
 
-[Click here for Demo](www.nalanda.works)
+[Click here for Demo](https://www.nalanda.works)
 
 ## Minified for best performance
 
