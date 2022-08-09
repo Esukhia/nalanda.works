@@ -40,7 +40,7 @@ Your app is ready to be deployed!
 
 # Screenshot of Working Webapp
 
-![screenshot of nalanda](https://www.site-shot.com/cached_image/xqIacBgFEe2giAJCrBEABg)
+![screenshot of nalanda](https://www.screenshotmachine.com/serve.php?file=result&1660065165278)
 
 ### Deployment
 
